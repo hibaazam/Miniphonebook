@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="jumbotron">
+    <h1>MINI PHONEBOOK</h1>
+    <p class="lead">MINI Phonebook allows you to store your personal and contact details</p>
+
+</div>
+<div>
+    <h1>Dashboard</h1>
+    <p>This is phone book Dashboard</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Total People</h2>
+        <p>
+            @Model.count()
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Birthday in next 10 days</h2>
+        <p>
+            @Model.bdays()
+        </p>
+    </div>
+
+
+    <div class="col-md-4">
+        <h2>Updated people in previous 7 days</h2>
+        <p>
+            @Model.Updatepeople()
+        </p>
+    </div>
+</div>
+<div class="col-md-4">
+    <h2>Person Details</h2>
+    <p>Add your person details</p>
+    @Html.ActionLink("Add person Details", "Create", "People")
+</div>
